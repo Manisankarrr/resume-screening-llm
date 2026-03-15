@@ -10,6 +10,7 @@ def clean_text(text: str) -> str:
     """
     if not text:
         return ""
+    
 
     # Normalize unicode (handles ligatures, weird quotes, etc.)
     text = unicodedata.normalize("NFKC", text)
@@ -22,5 +23,6 @@ def clean_text(text: str) -> str:
 
     # Remove non-printable control characters
     text = "".join(ch for ch in text if unicodedata.category(ch)[0] != "C")
+
 
     return text.strip()

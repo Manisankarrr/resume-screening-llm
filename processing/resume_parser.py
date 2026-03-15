@@ -11,6 +11,7 @@ def extract_text_from_pdf(pdf_source: Union[str, bytes, io.BytesIO]) -> str:
     """
     Extracts raw text from a PDF document.
     
+    
     Args:
         pdf_source: Can be a file path (str), raw bytes (from Streamlit), 
                     or a BytesIO object.
